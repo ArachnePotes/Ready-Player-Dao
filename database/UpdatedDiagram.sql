@@ -37,6 +37,8 @@ CREATE Table Chart (
 
 CREATE TABLE Coin (
     coin_id INT PRIMARY KEY,
+	coin_Name VARCHAR(30),
+	coin_slug VARCHAR(50),
     coin_symbol VARCHAR(5),
     coin_address BIGINT,
     chart_id INT,
@@ -75,9 +77,11 @@ CREATE TABLE Countries (
 );
 
 CREATE TABLE countries_played (
-    countries_played_id INT PRIMARY key,
+	countries_played_id INT PRIMARY KEY,
+    Game_id INT,
     Country_id INT,
-    FOREIGN KEY (Country_id) REFERENCES Countries(Country_id)
+    FOREIGN KEY (Country_id) REFERENCES Countries(Country_id),
+	FOREIGN KEY (Game_id) REFERENCES Game(game_id)
 );
 
 

@@ -27,7 +27,56 @@ This project aims to create a data dashboard for Ready Player DAO, an autonomous
 ## APIs Used
 
 - [EtherScan API](https://docs.etherscan.io/api-endpoints/accounts): Used for retrieving contract data, transactions, and other related information from the Ethereum blockchain.
+
+  **Examples:**
+
+  - Get a list of 'normal' transactions by address:
+
+    ```
+    https://api.etherscan.io/api
+    ?module=account
+    &action=txlist
+    &address=0xc5102fE9359FD9a28f877a67E36B0F050d81a3CC
+    &startblock=0
+    &endblock=99999999
+    &page=1
+    &offset=10
+    &sort=asc
+    &apikey=YourApiKeyToken
+    ```
+
+  - Get a list of 'internal' transactions by address:
+    ```
+    https://api.etherscan.io/api
+    ?module=account
+    &action=txlistinternal
+    &address=0x2c1ba59d6f58433fb1eaee7d20b26ed83bda51a3
+    &startblock=0
+    &endblock=2702578
+    &page=1
+    &offset=10
+    &sort=asc
+    &apikey=YourApiKeyToken
+    ```
+
+  Replace `YourApiKeyToken` with your own EtherScan API key and adjust the `address` and other parameters according to your needs.
+
 - [CoinGecko API](https://www.coingecko.com/en/api/documentation): Used for obtaining real-time and historical cryptocurrency market data, including the value of gaming tokens and other valuable information.
+
+  **Examples:**
+
+  - List all supported coin IDs, names, and symbols:
+    ```
+    https://api.coingecko.com/api/v3/coins/list
+    ```
+  - Get current data for a specific coin (e.g., Axie Infinity):
+    ```
+    https://api.coingecko.com/api/v3/coins/axie-infinity
+    ```
+
+  You can use the information provided by CoinGecko to retrieve price data and other details about gaming tokens and other valuable assets.
+
+Please note that these examples are for illustration purposes. Make sure to replace relevant values with the appropriate information to retrieve specific data in your project.
 
 ## Data Collection
 

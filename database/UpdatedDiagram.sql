@@ -1,35 +1,27 @@
-
-CREATE TABLE User_Table (
-    User_ID INT,
-    User_Name VARCHAR(50),
-    Last_Name VARCHAR(50),
-    Wallet BIGINT,
-    User_Mail VARCHAR(50),
-    User_Country INT,
-    PRIMARY KEY (User_ID),
-    FOREIGN KEY (Country) REFERENCES Countries(Country_id)
-);
+Create database ReadyPlayerDao;
+Use ReadyPlayerDao;
 
 
 CREATE TABLE TSX (
     tsx_id INT PRIMARY KEY,
-    user_wallet BIGINT,
+    user_wallet VARCHAR(50),
     coin_id INT,
+    User_ID INT,
+    FOREIGN key (User_ID) REFERENCES User_Table(User_ID),
     FOREIGN KEY (user_wallet) REFERENCES User_Table(Wallet),
     FOREIGN KEY (coin_id) REFERENCES Coin(coin_id)
 );
 
-
-CREATE TABLE Coin (
-    coin_id INT PRIMARY KEY,
-    block_id INT,
-    coin_symbol VARCHAR(5),
-    coin_address BIGINT,
-    chart_id INT,
-    chain_id INT,
-    FOREIGN KEY (chain_id) REFERENCES Chain(chain_id),
-    FOREIGN KEY (chart_id) REFERENCES Chart(chart_id)
+CREATE TABLE User_Table (
+    User_ID INT PRIMARY KEY,
+    User_Name VARCHAR(50),
+    Last_Name VARCHAR(50),
+    Wallet VARCHAR(50),
+    User_Mail VARCHAR(50),
+    User_Country INT,
+    FOREIGN KEY (User_Country) REFERENCES Countries(Country_id)
 );
+
 
 CREATE Table Chart (
     chart_id INT PRIMARY KEY,
@@ -41,6 +33,19 @@ CREATE Table Chart (
     chain_id INT,
     FOREIGN KEY (chain_id) REFERENCES Chain(chain_id)
 );
+
+
+CREATE TABLE Coin (
+    coin_id INT PRIMARY KEY,
+    coin_symbol VARCHAR(5),
+    coin_address BIGINT,
+    chart_id INT,
+    chain_id INT,
+    FOREIGN KEY (chain_id) REFERENCES Chain(chain_id),
+    FOREIGN KEY (chart_id) REFERENCES Chart(chart_id)
+);
+
+
 
 CREATE TABLE Game (
     game_id int PRIMARY KEY,

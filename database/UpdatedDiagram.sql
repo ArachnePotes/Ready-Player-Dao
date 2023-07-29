@@ -89,7 +89,7 @@ CREATE TABLE DevActivity (
     dev_activity_id INT PRIMARY KEY,
     last_update TIMESTAMP,
     launch_date TIMESTAMP,
-    is_active  BINARY
+    is_active  BOOl
 );
 
 

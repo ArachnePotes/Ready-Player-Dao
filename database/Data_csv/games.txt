@@ -1,0 +1,13 @@
+EV.io,Third Person Shooter
+League of Kingdoms,Real-time Strategy
+Big Time,MMORPG
+Champions Ascension,Real-time Strategy
+Axie Infinity,Turnbased Strategy
+The Sandbox,Open World
+Splinterlands, Collectible Card Game
+Illuvium,Tycoon/Economic Sim
+Castle Crush,Real-time Strategy
+Castaways,Open World
+Crypto Unicorns,Farming Sim
+Pixels.xyz,MMORPG
+My Pet Hooligan,Action RPG

@@ -7,6 +7,7 @@ CREATE TABLE TSX (
     user_wallet VARCHAR(50),
     coin_id INT,
     User_ID INT,
+	amount BIGINT,
     FOREIGN key (User_ID) REFERENCES User_Table(User_ID),
     FOREIGN KEY (user_wallet) REFERENCES User_Table(Wallet),
     FOREIGN KEY (coin_id) REFERENCES Coin(coin_id)
@@ -22,7 +23,6 @@ CREATE TABLE User_Table (
     FOREIGN KEY (User_Country) REFERENCES Countries(Country_id)
 );
 
-
 CREATE Table Chart (
     chart_id INT PRIMARY KEY,
     high_val FLOAT,
@@ -31,7 +31,17 @@ CREATE Table Chart (
     date_val TIMESTAMP,
     Liquity FLOAT,
     chain_id INT,
-    FOREIGN KEY (chain_id) REFERENCES Chain(chain_id)
+    coin_id int,
+	FOREIGN KEY (coin_id) REFERENCES Coin(coin_id),
+	FOREIGN KEY (chain_id) REFERENCES Chain(chain_id)
+);
+
+CREATE TABLE Chain (
+    chain_id int PRIMARY KEY,
+    chain_name VARCHAR(50),
+    chain_blocksize BIGINT,
+    chain_lastblock BIGINT,
+    chain_release TIMESTAMP
 );
 
 
@@ -42,9 +52,7 @@ CREATE TABLE Coin (
     coin_symbol VARCHAR(5),
     coin_address BIGINT,
     chart_id INT,
-    chain_id INT,
     FOREIGN KEY (chain_id) REFERENCES Chain(chain_id),
-    FOREIGN KEY (chart_id) REFERENCES Chart(chart_id)
 );
 
 
@@ -54,6 +62,9 @@ CREATE TABLE Game (
     game_name VARCHAR(50),
     game_category VARCHAR(50),
     coin_id INT,
+	launch_date TIMESTAMP,
+	dev_activity_id INT,
+	FOREIGN KEY (dev_activity_id) REFERENCES DevActivity(dev_activity_id),
     FOREIGN KEY (coin_id) REFERENCES Coin(coin_id)
 );
 
@@ -61,11 +72,9 @@ CREATE TABLE Game (
 CREATE TABLE Stats (
     stats_id int PRIMARY KEY,
     game_id INT,
-    dev_activity_id INT,
     countries_played_id INT,
     comunity_id INT,
     FOREIGN KEY (game_id) REFERENCES Game(game_id),
-    FOREIGN KEY (dev_activity_id) REFERENCES DevActivity(dev_activity_id),
     FOREIGN KEY (countries_played_id) REFERENCES countries_played(countries_played_id),
     FOREIGN KEY (comunity_id) REFERENCES Comunity(comunity_id)
 );
@@ -88,7 +97,9 @@ CREATE TABLE countries_played (
 CREATE TABLE DevActivity (
     dev_activity_id INT PRIMARY KEY,
     last_update TIMESTAMP,
-    launch_date TIMESTAMP,
+    TypeUpdate VARCHAR(30),
+	TypeUpdate_id int,
+	Description VARCHAR(240),
     is_active  BOOl
 );
 
@@ -100,13 +111,6 @@ CREATE TABLE  Comunity(
     webPage VARCHAR(255)
 );
 
-CREATE TABLE Chain (
-    chain_id int PRIMARY KEY,
-    chain_name VARCHAR(50),
-    chain_blocksize BIGINT,
-    chain_lastblock BIGINT,
-    chain_release TIMESTAMP
-);
 
 
 

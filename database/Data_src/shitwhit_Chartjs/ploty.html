@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plotly.js Example</title>
+  <!-- Include Plotly.js library from CDN -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div id="plot"></div>
+
+  <script>
+    // Your JSON data (replace this with your actual JSON data)
+    var jsonData = [
+      { x: [1, 2, 3, 4], y: [10, 11, 15, 13], type: 'scatter', mode: 'lines+markers', name: 'line 1' },
+      { x: [1, 2, 3, 4], y: [16, 5, 11, 9], type: 'scatter', mode: 'lines+markers', name: 'line 2' }
+    ];
+
+    // Create a plot using Plotly.js
+    Plotly.newPlot('plot', jsonData);
+  </script>
+</body>
+</html>

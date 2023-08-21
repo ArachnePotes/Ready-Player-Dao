@@ -1,0 +1,48 @@
+{
+  "name": "daobase",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "![Project Logo](https://example.com/project_logo.png)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon app.js",
+    "chart": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pota-hub/Player-Dao-Base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pota-hub/Player-Dao-Base/issues"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "crypto-browserify": "^3.12.0",
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.5.2",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.9.3",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "timers-browserify": "^2.0.12",
+    "url": "^0.11.1",
+    "util": "^0.12.5"
+  },
+  "homepage": "https://github.com/Pota-hub/Player-Dao-Base#readme",
+  "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
+    "chart.js": "^4.3.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.5.2",
+    "net": "^1.0.2"
+  }
+}

@@ -331,6 +331,33 @@
                             <label class="form-label" for="country">Country</label>
                             <select id="country" class="select2 form-select">
                               <option value="">Select</option>
+<<<<<<< HEAD
+                              <option value="9">Australia</option>
+                              <option value="14">Bangladesh</option>
+                              <option value="16">Belarus</option>
+                              <option value="24">Brazil</option>
+                              <option value="31">Canada</option>
+                              <option value="36">China</option>
+                              <option value="61">France</option>
+                              <option value="65">Germany</option>
+                              <option value="77">India</option>
+                              <option value="78">Indonesia</option>
+                              <option value="82">Israel</option>
+                              <option value="83">Italy</option>
+                              <option value="85">Japan</option>
+                              <option value="90">Korea, North</option>
+                              <option value="91">Korea, South</option>
+                              <option value="114">Mexico</option>
+                              <option value="139">Philippines</option>
+                              <option value="144">Russian Federation</option>
+                              <option value="162">South Africa</option>
+                              <option value="175">Thailand</option>
+                              <option value="180">Turkey</option>
+                              <option value="184">Ukraine</option>
+                              <option value="185">United Arab Emirates</option>
+                              <option value="186">United Kingdom</option>
+                              <option value="187">United States</option>
+=======
                               <option value="Australia">Australia</option>
                               <option value="Bangladesh">Bangladesh</option>
                               <option value="Belarus">Belarus</option>
@@ -355,6 +382,7 @@
                               <option value="United Arab Emirates">United Arab Emirates</option>
                               <option value="United Kingdom">United Kingdom</option>
                               <option value="United States">United States</option>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
                             </select>
                           </div>
                           <div class="mb-3 col-md-6">
@@ -403,7 +431,11 @@
                           </div>
                         </div>
                         <div class="mt-2">
+<<<<<<< HEAD
+                          <button type="submit" class="btn btn-primary me-2" onclick="PushUser(event)">Save changes</button>
+=======
                           <button type="submit" class="btn btn-primary me-2">Save changes</button>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
                           <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                         </div>
                       </form>
@@ -479,7 +511,37 @@
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>
     <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<<<<<<< HEAD
+    <script>
+      var url = "http://localhost:8080/newuser/";
 
+      
+      function PushUser(e){
+        const data = // searchCountry(document.getElementById("country").value) 
+        {
+          "user_name": document.getElementById("firstName").value,
+          "last_name": document.getElementById("lastName").value,
+          "wallet": "0x02312312",
+          "user_mail": document.getElementById("email").value,
+          "user_country": parseInt(document.getElementById("country").value)
+        }       
+        console.log(data)
+        fetch(url, {
+        method: "POST", // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers: {
+          "Content-Type": "application/json",
+        },
+        })
+        .then((res) => res.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => console.log("Success:", response));
+      }
+
+    </script>
+=======
+
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
     <script src="../assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 

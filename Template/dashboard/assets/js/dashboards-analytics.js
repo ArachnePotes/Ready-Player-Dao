@@ -4,8 +4,22 @@
 
 'use strict';
 
+<<<<<<< HEAD
+var url = 'http://localhost:8080/chart/2/2/mapped'
+$.getJSON(url, function(response) {
+  chart.updateSeries([{
+    name: 'Sales',
+    data: response
+  }])
+});
+
 (function () {
   let cardColor, headingColor, axisColor, shadeColor, borderColor;
+  let General_coin 
+=======
+(function () {
+  let cardColor, headingColor, axisColor, shadeColor, borderColor;
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
 
   cardColor = config.colors.white;
   headingColor = config.colors.headingColor;
@@ -19,7 +33,11 @@
       series: [
         {
           name: '2021',
+<<<<<<< HEAD
+          data: Yaxis
+=======
           data: [18, 7, 15, 29, 18, 12, 9]
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
         },
         {
           name: '2020',
@@ -78,7 +96,11 @@
         }
       },
       xaxis: {
+<<<<<<< HEAD
+        categories: Xaxis,
+=======
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
         labels: {
           style: {
             fontSize: '13px',
@@ -268,7 +290,11 @@
           }
         }
       }
+<<<<<<< HEAD
+    }; 
+=======
     };
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
   if (typeof totalRevenueChartEl !== undefined && totalRevenueChartEl !== null) {
     const totalRevenueChart = new ApexCharts(totalRevenueChartEl, totalRevenueChartOptions);
     totalRevenueChart.render();
@@ -278,7 +304,11 @@
   // --------------------------------------------------------------------
   const growthChartEl = document.querySelector('#growthChart'),
     growthChartOptions = {
+<<<<<<< HEAD
+      series: [82],
+=======
       series: [78],
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
       labels: ['Growth'],
       chart: {
         height: 240,

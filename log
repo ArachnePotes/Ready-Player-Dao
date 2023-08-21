@@ -1,0 +1,47 @@
+[33mcommit 30e045313774c8f016cb25280992a44a45cf1e57[m[33m ([m[1;36mHEAD -> [m[1;32mfront-base[m[33m, [m[1;31morigin/front-base[m[33m)[m
+Author: JeisonNovoa <jeisonnovoa7@gmail.com>
+Date:   Tue Aug 8 20:28:31 2023 -0500
+
+    Add front-base
+
+[33mcommit fd676945fa661517dff7d9e6fe1703d5371986d5[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: s.potes <s.potes@utp.edu.co>
+Date:   Mon Jul 31 11:21:08 2023 -0500
+
+    Commented DB script
+
+[33mcommit 6225c82bf756c1728f328ad95989adc335c71eeb[m
+Author: s.potes <s.potes@utp.edu.co>
+Date:   Sun Jul 30 14:42:40 2023 -0500
+
+    fixed redundancy with devActivity
+
+[33mcommit a78b94997e9e5dcfdb9febae992fc503020daf62[m
+Author: s.potes <s.potes@utp.edu.co>
+Date:   Fri Jul 28 20:15:17 2023 -0500
+
+    stuff
+
+[33mcommit a0e1fe4fb3c15777b41ac9fdf9cad120adfd5d43[m
+Author: s.potes <s.potes@utp.edu.co>
+Date:   Fri Jul 28 17:48:42 2023 -0500
+
+    updating bd model
+
+[33mcommit d659ace02bb1394ac344cd030b027be576ec50ec[m
+Author: Jeison Novoa <106498984+JeisonNovoa@users.noreply.github.com>
+Date:   Fri Jul 28 17:41:16 2023 -0500
+
+    Update README.md
+
+[33mcommit 9c1ddfdc8d4616ceb0f20429a27e6a6705b3503a[m
+Author: s.potes <s.potes@utp.edu.co>
+Date:   Fri Jul 28 17:33:34 2023 -0500
+
+    mas imagenes del proyecto y actualizacion scripts sql
+
+[33mcommit dbb706bac7260f9be37fc4232049dd0f6d91c414[m
+Author: JeisonNovoa <jeisonnovoa7@gmail.com>
+Date:   Fri Jul 28 16:48:27 2023 -0500
+
+    add project

@@ -311,7 +311,68 @@
                   <div class="card">
                     <div class="row row-bordered g-0">
                       <div class="col-md-8">
+<<<<<<< HEAD
+                        <h5 class="card-header m-0 me-2 pb-3">Coin Value Tracker</h5>
+                        <div class="card-body">
+                          <div class="demo-inline-spacing">
+                            <div class="from-group " id="game" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              Select Game
+                              <select class="form-control outline-primary" aria-labelledby="game" id="game_selector" onchange="gameSelect(event)">
+                                <option class="dropdown-item" id="game_selected" value="1">EV.io</option>
+                                <option class="dropdown-item" id="game_selected" value="5">League of Kingdoms</option>
+                                <option class="dropdown-item" id="game_selected" value="7">Big Time</option>
+                                <option class="dropdown-item" id="game_selected" value="9">Champions Ascension</option>
+                                <option class="dropdown-item" id="game_selected" value="2">Axie Infinity </option>
+                                <option class="dropdown-item" id="game_selected" value="3">The Sandbox</option>
+                                <option class="dropdown-item" id="game_selected" value="spliterlands">Splinterlands</option>
+                                <option class="dropdown-item" id="game_selected" value="4">Illuvium</option>
+                                <option class="dropdown-item" id="game_selected" value="6">Castle Crush</option>
+                                <option class="dropdown-item" id="game_selected" value="8">Castaways</option>
+                                <option class="dropdown-item" id="game_selected" value="10">Crypto Unicorns</option>
+                                <option class="dropdown-item" id="game_selected" value="11">Pixels.xyz</option>
+                                <option class="dropdown-item" id="game_selected" value="12">My Pet Hooligan</option>
+                              </select>
+                            </div>
+                            <div class="from-group " id="chain" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              Select Chain
+                              <select class="form-control outline-primary" aria-labelledby="chain" id="chain_selector" onchange="chainSelect(event)">
+                                <option class="dropdown-item" id="chain_selected" value="1">USD</option>
+                                <option class="dropdown-item" id="chain_selected" value="2">Etherium</option>
+                                <option class="dropdown-item" id="chain_selected" value="3">Sepolia</option>
+                              </select>
+                            </div>
+                            <div class="from-group " id="time" data-bs-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              Select Timelaps
+                              <select class="form-control outline-primary" aria-labelledby="chain" id="chain_selector" onchange="rangeSelect(event)">
+                                <option class="dropdown-item" id="time_slected" value="7">7 Days</option>
+                                <option class="dropdown-item" id="time_selected" value="15">15 Days</option>
+                                <option class="dropdown-item" id="time_selected" value="30">30 Days</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class=" py-3 text-center">
+                            <button
+                              class="btn btn-sm btn-outline-primary"
+                                type="button"
+                                id="update"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                onclick="CoinGeekoTest()">
+                              Track Coin
+                            </button>
+                            
+                            <button onclick="startWorker(event)">Start Worker</button>
+                            <button onclick="stopWorker()">Stop Worker</button>
+                            <p>Count numbers: <output id="result"></output></p>
+                          </div>
+                        </div>
+=======
                         <h5 class="card-header m-0 me-2 pb-3">Total Revenue</h5>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
                         <div id="totalRevenueChart" class="px-2"></div>
                       </div>
                       <div class="col-md-4">
@@ -337,7 +398,11 @@
                           </div>
                         </div>
                         <div id="growthChart"></div>
+<<<<<<< HEAD
+                        <div class="text-center fw-semibold pt-3 mb-2"> Funds Deployed </div>
+=======
                         <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
 
                         <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
                           <div class="d-flex">
@@ -458,8 +523,13 @@
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between pb-0">
                       <div class="card-title mb-0">
+<<<<<<< HEAD
+                        <h5 class="m-0 me-2">Tickers</h5>
+                        <small class="text-muted">Total Exchangers</small>
+=======
                         <h5 class="m-0 me-2">Order Statistics</h5>
                         <small class="text-muted">42.82k Total Sales</small>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
                       </div>
                       <div class="dropdown">
                         <button
@@ -483,7 +553,11 @@
                       <div class="d-flex justify-content-between align-items-center mb-3">
                         <div class="d-flex flex-column align-items-center gap-1">
                           <h2 class="mb-2">8,258</h2>
+<<<<<<< HEAD
+                          <span>Exchanges</span>
+=======
                           <span>Total Orders</span>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
                         </div>
                         <div id="orderStatisticsChart"></div>
                       </div>
@@ -788,6 +862,42 @@
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
+<<<<<<< HEAD
+    <!-- Charts JS -->
+    <script src="../assets/js/Close_value_Graph.js"></script>
+    <!-- Update chart -->
+    <script>
+      function gameSelect(e) {
+        document.getElementById("game_selected").value = e.target.value
+        console.log(e.target.value)
+        return e.target.value
+      }
+      function chainSelect(e) {
+        document.getElementById("chain_selected").value = e.target.value
+        console.log(e.target.value)
+        return e.target.value
+      }
+      function rangeSelect(e) {
+        document.getElementById("time_selected").value = e.target.value
+        console.log(e.target.value)
+        return e.target.value
+      }
+    </script>
+    <script src="../assets/js/Close_value_Interactive.js"></script>
+    <script src="../assets/js/Game_Category_Chart.js"></script>
+    <script src="../assets/js/Founds_Chart.js"></script>
+    <!-- workers. </script>-->
+    <script src="../assets/js/workers.js" type="module"></script>
+    <script>
+ 
+
+    </script>
+    
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
+=======
     <!-- Page JS -->
     <script src="../assets/js/dashboards-analytics.js"></script>
 
@@ -795,3 +905,4 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>
+>>>>>>> ea6501c53894b5facb33a1741974856209ee6e77

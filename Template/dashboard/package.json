@@ -49,14 +49,10 @@
     "highlight.js": "~9.17.1",
     "jquery": "~3.5.1",
     "masonry-layout": "~4.2.1",
-<<<<<<< HEAD
     "perfect-scrollbar": "~1.5.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mysql2": "^3.5.2"
-=======
-    "perfect-scrollbar": "~1.5.1"
->>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
   },
   "devDependencies": {
     "@babel/core": "~7.7.7",

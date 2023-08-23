@@ -6,14 +6,14 @@ function mapper_chart(data) {
       high: parseFloat(data.market_data.high_24h.usd),
       chain_id: 1,
       Liquity: parseFloat(data.liquidity_score),
-      coin_id: 2, //getCoinID(data.symbol),
+      coin_id: 3, //getCoinID(data.symbol),
     };
     return rubber_to_chart}
   
-  function geeko_rubber_data_axs() {
-      var Time = 1850000;
+  function geeko_rubber_data_sand() {
+      var Time = 1816000;
       url =
-        'https://api.coingecko.com/api/v3/coins/axie-infinity/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
+        'https://api.coingecko.com/api/v3/coins/the-sandbox/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
       fetch(url, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -28,8 +28,8 @@ function mapper_chart(data) {
             console.error('Error:', error) 
           }
         )))
-        .then(setTimeout('geeko_rubber_data_axs()', Time));
+        .then(setTimeout('geeko_rubber_data_sand()', Time));
     }
   
   
-  geeko_rubber_data_axs();
+    geeko_rubber_data_sand();

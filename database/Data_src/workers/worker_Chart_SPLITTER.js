@@ -1,22 +1,22 @@
 function mapper_coin(data) {
     let rubber_to_coin = {
-      coin_id: 3,
-      coin_rank: parseInt(data.coingecko_rank),
+      coin_id: 10,
+      coin_rank: 0,
       coin_Name: data.name,
       coin_slug: data.id,
       coin_symbol: data.symbol,
       coin_address: data.contract_address,
-      circulatingSupply: parseInt(data.market_data.circulating_supply),
-      totalSupply: parseInt(data.market_data.total_supply),
-      maxSupply: parseInt(data.market_data.max_supply)
+      circulatingSupply: parseInt(data.number_of_unique_addresses),
+      totalSupply: parseInt(data.total_supply),
+      maxSupply: 0
     };
      return rubber_to_coin
   }
   
-  function geeko_shaped_data_axs() {
-    var Time = 1800000;
-    url =
-      'https://api.coingecko.com/api/v3/coins/the-sandbox/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
+  function geeko_rubber_data_CryptoU() {
+    var Time = 1818100;
+    // problem with url
+    url = "https://api.coingecko.com/api/v3/nfts/splittershards";
     fetch(url, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
@@ -31,8 +31,9 @@ function mapper_coin(data) {
           console.error('Error:', error) 
         }
       )))
-      .then(setTimeout('geeko_shaped_data_axs()', Time));
+      .then(setTimeout('geeko_rubber_data_CryptoU()', Time));
   }
   
   
-  geeko_shaped_data_axs();
+  
+  geeko_rubber_data_CryptoU();

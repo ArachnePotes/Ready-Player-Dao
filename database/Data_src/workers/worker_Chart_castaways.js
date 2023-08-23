@@ -1,19 +1,18 @@
 function mapper_chart(data) {
     let rubber_to_chart;
     rubber_to_chart = {
-      close_val: parseFloat(data.market_data.current_price.usd),
-      volume: parseFloat(data.market_data.total_volume.usd),
-      high: parseFloat(data.market_data.high_24h.usd),
+      close_val: parseFloat(data.market_cap.usd),
+      volume: parseFloat(data.volume_24h.usd),
+      high: 0,
       chain_id: 1,
-      Liquity: parseFloat(data.liquidity_score),
-      coin_id: 2, //getCoinID(data.symbol),
+      Liquity:0,
+      coin_id: 8, //getCoinID(data.symbol),
     };
     return rubber_to_chart}
-  
+
   function geeko_rubber_data_axs() {
-      var Time = 1850000;
-      url =
-        'https://api.coingecko.com/api/v3/coins/axie-infinity/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
+      var Time = 1860000;
+      url = "https://api.coingecko.com/api/v3/nfts/castaways-genesis";
       fetch(url, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -30,6 +29,6 @@ function mapper_chart(data) {
         )))
         .then(setTimeout('geeko_rubber_data_axs()', Time));
     }
-  
-  
+
+
   geeko_rubber_data_axs();

@@ -1,6 +1,6 @@
 function mapper_coin(data) {
     let rubber_to_coin = {
-      coin_id: 3,
+      coin_id: 2,
       coin_rank: parseInt(data.coingecko_rank),
       coin_Name: data.name,
       coin_slug: data.id,
@@ -12,11 +12,11 @@ function mapper_coin(data) {
     };
      return rubber_to_coin
   }
-  
-  function geeko_shaped_data_axs() {
-    var Time = 1800000;
+
+function geeko_shaped_data_axs() {
+    var Time = 1817000;
     url =
-      'https://api.coingecko.com/api/v3/coins/the-sandbox/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
+      'https://api.coingecko.com/api/v3/coins/axie-infinity/?localization=true?tickers=true?community_data=true?developer_data=true?vs_currency=usd,eth,btc,matic';
     fetch(url, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
@@ -33,6 +33,6 @@ function mapper_coin(data) {
       )))
       .then(setTimeout('geeko_shaped_data_axs()', Time));
   }
-  
-  
+
+
   geeko_shaped_data_axs();

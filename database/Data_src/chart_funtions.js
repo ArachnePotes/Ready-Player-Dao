@@ -71,6 +71,18 @@ export async function UpdateChart_Geeko(close_val,volume,high,chain_id,Liquity,c
     return getChart(id)
 }
 
+
+
+export async function getChartDataTimmed(coin_id,chain_id,time){
+    const today = new Date().toLocaleString();
+    const range = Date.parse(today) - time ;
+    const normal = new Date(range)//.toLocaleString().replace('/','-').replace('/','-').replace('AM','').replace(',',''); // aaaa-mm-dd hh-mm-ss
+    const since = (2023+ '-' + normal.getMonth() + '-' + normal.getDay() + " " + "23:59:59").toString()
+    const result = await pool.query(` SELECT close_val, volume, high, chain_id, Liquity, coin_id, date_val FROM readyplayerdao.chart
+    where chain_id = ? and coin_id = ? and date_val < ?; `,[chain_id,coin_id,since])
+    return result[0]
+}
+
 //getChartData_CoinGeeko('usd','the-sandbox','5','30')
 //const games = await GameCategories()
 //console.log(games)

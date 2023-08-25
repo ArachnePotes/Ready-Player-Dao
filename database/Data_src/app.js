@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"; // Importa el paquete cors
 import { GetGamesData,GetGameById, AddUserPOST, addUserTsx_ID, addUserTsx } from './User.js'
-import { GameCategories,getChartData, getValue , UpdateChartDB ,UpdateChart_Geeko} from "./chart_funtions.js"
+import { GameCategories,getChartData, getValue , UpdateChartDB ,UpdateChart_Geeko, getChartDataTimmed} from "./chart_funtions.js"
 import { getChainIdBySlug, getCoinID,getCoinIDbySlug ,updateCoin} from "./coin.js";
 
 const app = express();
@@ -86,15 +86,54 @@ app.get("/chart/:chain/:coin/mapped",  async (req, res) => {
 })
 
 
-app.get("/chart/:chain/:game_slug/:timelap/mapped", async (req, res) => {
+app.get("/chart/:chain/:coin/volume/mapped",  async (req, res) => {
   /*Http request to get the data of a game based on the id*/
   const chain = req.params.chain
-  const game_slug = req.params.game_slug
-  const timelap = req.params.timelap
-  const coin = await getCoinID(game_slug)
+  const coin = req.params.coin
   const chart = await getChartData(coin,chain)
-  res.send(chart);
+  const Yaxis = chart.map((value) => 
+  value = {
+    "x" : value.date_val,
+    "y" : value.volume
+  }); 
+  //res.sendStatus(200)
+  res.send(Yaxis)
+})
+
+
+
+app.get("/chart/:chain/:game_slug/:timelap/mapped", async (req, res) => {
+  /*PENDIENTE DE TERMINAR*/
+  /*Http request to get the data of a game based on the id*/
+  const chain = req.params.chain
+  const coin = req.params.coin
+  const time = req.params.timelap
+  const chart = await getChartData(coin,chain)
+  const Yaxis = chart.map((value) => 
+  value = {
+    "x" : value.date_val,
+    "y" : value.close_val
+  }); 
+  //res.sendStatus(200)
+  res.send(Yaxis)
 });
+
+app.get("/chart/:chain/:game_slug/:timelap/volume/mapped", async (req, res) => {
+  /*PENDIENTE DE TERMINAR*/
+  /*Http request to get the data of a game based on the id*/
+  const chain = req.params.chain
+  const coin = req.params.coin
+  const time = req.params.timelap
+  const chart = await getChartData(coin,chain)
+  const Yaxis = chart.map((value) => 
+  value = {
+    "x" : value.date_val,
+    "y" : value.volume
+  }); 
+  //res.sendStatus(200)
+  res.send(Yaxis)
+});
+
 
 app.post("/update/chart",  async (req, res) => {
   /*Http request to get the last value of a game based on the slug and curreancy*/

@@ -1,0 +1,6 @@
+User_ID,User_Name,Last_Name,Wallet,User_Mail,User_Country
+1,John,Doe,123456789,john.doe@example.com,67
+2,John,Doe,0x02312312,john.doe@example.com,67
+3,John,Doe,0x02312312,john.doe@example.com,67
+4,japo,test,0x02312312,chichonchan@mail.com,85
+5,John,Doe,0x02312312,john.doe@example.com,16

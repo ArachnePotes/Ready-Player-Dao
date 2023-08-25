@@ -1,0 +1,4 @@
+chain_id,chain_name,chain_lastblock,chain_release
+1,usd,1,NULL
+2,eth,1,NULL
+3,matic,1,NULL

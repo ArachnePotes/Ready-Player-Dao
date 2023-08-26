@@ -4,13 +4,13 @@
 
 'use strict';
 function CoinGeekoTest() {
-  const game = document.getElementById("game_selected").value
+  const coin = document.getElementById("game_selected").value
   const chain = document.getElementById("chain_selected").value
   const range = document.getElementById("time_selected").value
-  console.log(game,chain,range)
+  console.log(game,chain,range) 
   var url = new URL('http://localhost:8080/chart/')
-  var link_close = url + chain + "/" + game + '/mapped';
-  var link_vol = url + chain + "/" + game +  '/volume' +'/mapped';
+  var link_close = url + chain + "/" + coin  + "/"+ range + '/mapped';
+  var link_vol = url + chain + "/" + coin + "/" + range  +  '/volume' +'/mapped';
   console.log(link_close,link_vol)
   $.getJSON(link_close, function(response) {
     totalRevenueChart.updateSeries([{
@@ -18,6 +18,7 @@ function CoinGeekoTest() {
       data: response
     }])
   });
+  
   $.getJSON(link_vol, function(response) {
     VolumeChart.updateSeries([{
         name: 'Trading Volume',

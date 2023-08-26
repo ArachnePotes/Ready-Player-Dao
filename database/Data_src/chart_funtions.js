@@ -75,12 +75,15 @@ export async function UpdateChart_Geeko(close_val,volume,high,chain_id,Liquity,c
 
 export async function getChartDataTimmed(coin_id,chain_id,time){
     const today = new Date().toLocaleString();
-    const range = Date.parse(today) - time ;
-    const normal = new Date(range)//.toLocaleString().replace('/','-').replace('/','-').replace('AM','').replace(',',''); // aaaa-mm-dd hh-mm-ss
-    const since = (2023+ '-' + normal.getMonth() + '-' + normal.getDay() + " " + "23:59:59").toString()
-    const result = await pool.query(` SELECT close_val, volume, high, chain_id, Liquity, coin_id, date_val FROM readyplayerdao.chart
-    where chain_id = ? and coin_id = ? and date_val < ?; `,[chain_id,coin_id,since])
-    return result[0]
+    const range2 = Date.parse(today) - 80000000*parseInt(time);//7 dias
+    const result = new Date(range2).toLocaleString()
+    const day = result.slice(2,4)
+    const month = result.slice(0,2).replace("/","")
+    const year = result.slice(5,9).replace("/","")
+    const cosa = year+"@"+month+"@"+day
+    const result_query = await pool.query(` SELECT close_val, volume, high, chain_id, Liquity, coin_id, date_val FROM readyplayerdao.chart
+    where chain_id = ? and coin_id = ? and date_val > ?; `,[chain_id,coin_id,cosa])
+    return result_query[0]
 }
 
 //getChartData_CoinGeeko('usd','the-sandbox','5','30')

@@ -1,0 +1,14 @@
+coin_id,coin_rank,coin_Name,coin_slug,coin_symbol,coin_address,circulatingSupply,totalSupply,maxSupply
+1,4,Solana,solana,sol,NULL,407934190,555819249,NULL
+2,412,"Axie Infinity",axie-infinity,axs,0xbb0e17ef65f82ab018d8edd776e8dd940327b28b,131031753,270000000,270000000
+3,350,"The Sandbox",the-sandbox,sand,0x3845badade8e6dff049820680d1f14bd3903a5d0,2057931926,3000000000,3000000000
+4,729,Illuvium,illuvium,ilv,0x767fe9edc9e0df98e07454847909b5e959d7ca0e,5689791,9619504,NULL
+5,816,"League of Kingdoms",league-of-kingdoms,loka,0x61e90a50137e1f645c9ef4a0d3a4f01477738406,114916312,182512308,NULL
+6,0,"Castle Crush",castle-crush,cc,0xa695ea0c90d89a1463a53fa7a02168bc46fbbf7e,2311,339,0
+7,5665,Spacelens,spacelens,space,0xcc7ab8d78dba187dc95bf3bb86e65e0c26d0041f,0,1000000000,1000000000
+8,0,"Castaways Genesis",castaways-genesis,CHAR,0xde721B3C38cbFaBCdFcC29f0bC320efeB5c245ef,311,1000,0
+9,0,"Champions Ascension",champions-ascension,PEC,0x13d15d8b7b2bf48cbaf144c5c50e67b6b635b5cd,829,5323,0
+10,0,"Crypto Unicorns",crypto-unicorns,UNICORNS,0xdc0479cc5bba033b3e7de9f178607150b3abce1f,5487,163501,0
+11,5192,PixelVerse,pixelverse,pixel,0x47db24e17c0c4622523449a239b3de746e2b0b23,0,4484292,1000000000
+12,0,"My Pet Hooligan",my-pet-hooligan,MPH,0x09233d553058c2f42ba751c87816a8e9fae7ef10,3823,8888,0
+13,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL

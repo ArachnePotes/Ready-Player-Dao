@@ -58,13 +58,10 @@
       async function connectAndRedirect() {
         try {
           // Detect MetaMask provider
+          
           const provider = await window.ethereum.request({ method: 'eth_requestAccounts' });
           if (provider) {
-            // Wallet connected successfully
-<<<<<<< HEAD
-            console.log(provider)
-=======
->>>>>>> ea6501c53894b5facb33a1741974856209ee6e77
+            //Wallet connected successfully
             redirectToDashboard();
           }
         } catch (error) {
